@@ -1,0 +1,26 @@
+/* Base theme tokens and document defaults. */
+:root
+{
+  --bg: #0a0d13;
+  --panel: #0f1521;
+  --panel2: #0c111b;
+  --text: #e7eefc;
+  --muted: #a8b3cc;
+  --border: rgba(255, 255, 255, 0.12);
+  --accent: #6bb2ff;
+}
+
+*
+{
+  box-sizing: border-box;
+}
+
+html, body
+{
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  overflow: hidden;
+}

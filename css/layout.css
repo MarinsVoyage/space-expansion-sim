@@ -1,0 +1,74 @@
+/* Layout containers for app structure. */
+.app
+{
+  height: 100vh;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.noscriptMessage
+{
+  display: none;
+  min-height: 100vh;
+  padding: 32px;
+  place-content: center;
+  text-align: center;
+  background: radial-gradient(800px 400px at 50% 20%, rgba(107,178,255,0.1), transparent 60%),
+              linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  color: var(--text);
+  font-size: 15px;
+}
+
+.topbar
+{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), transparent);
+}
+
+.titleBlock
+{
+  min-width: 240px;
+}
+
+.panes
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 12px;
+  min-height: 0;
+}
+
+.pane
+{
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), transparent);
+  min-height: 0;
+}
+
+.paneHeader
+{
+  padding: 10px 12px;
+  background: rgba(0,0,0,0.12);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.footer
+{
+  padding: 10px 14px;
+  border-top: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+}

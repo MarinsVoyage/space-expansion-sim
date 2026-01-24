@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "configVersion": 1,
+    "defaultLanguage": "en"
+  },
+  "physics": {
+    "defaultMode": "lcdm",
+    "modes": [
+      {
+        "value": "lcdm",
+        "label": "Flat LambdaCDM Friedmann model"
+      },
+      {
+        "value": "desitter",
+        "label": "Pure Lambda de Sitter model"
+      },
+      {
+        "value": "linear",
+        "label": "Linear a of t toy model"
+      }
+    ],
+    "parameters": {
+      "h0KmPerSecondPerMegaparsec": 67.4,
+      "omegaMatter": 0.315,
+      "omegaRadiation": 0.0,
+      "omegaLambda": 0.685,
+      "aMin": 0.01,
+      "aStart": 1.0
+    },
+    "linearTimelineGyr": 12.0,
+    "timelineSampleCount": 2600,
+    "aMaxOptions": [
+      {
+        "value": 2,
+        "label": "1 to 2 times"
+      },
+      {
+        "value": 3,
+        "label": "1 to 3 times"
+      },
+      {
+        "value": 4,
+        "label": "1 to 4 times"
+      },
+      {
+        "value": 6,
+        "label": "1 to 6 times"
+      }
+    ],
+    "defaultAMax": 3
+  },
+  "ui": {
+    "defaultRenderStyle": "dots",
+    "defaultDistributionMode": "grid",
+    "defaultShowBoundPoints": false,
+    "defaultMeasureDistance": true,
+    "renderStyles": [
+      {
+        "value": "dots",
+        "label": "Dots"
+      },
+      {
+        "value": "markers",
+        "label": "Markers squares and cubes"
+      },
+      {
+        "value": "voxels",
+        "label": "Voxels connected grid"
+      }
+    ],
+    "distributionModes": [
+      {
+        "value": "grid",
+        "label": "Grid"
+      },
+      {
+        "value": "random",
+        "label": "Random"
+      }
+    ],
+    "speedSlider": {
+      "min": 0,
+      "max": 100,
+      "defaultValue": 55,
+      "minGyrPerSecond": 0.01,
+      "maxGyrPerSecond": 5.0
+    },
+    "timelineSlider": {
+      "min": 0,
+      "max": 1000,
+      "defaultValue": 0
+    },
+    "densitySlider": {
+      "min": 4,
+      "max": 18,
+      "defaultValue": 10
+    },
+    "boxSizeMpc": {
+      "min": 1,
+      "step": 1,
+      "defaultValue": 1000
+    }
+  },
+  "rendering": {
+    "renderer2d": {
+      "gridCountMin": 2,
+      "gridCountMax": 40,
+      "view": {
+        "maxScalePadding": 0.44,
+        "boundaryLineScale": 600,
+        "gridLineScale": 950,
+        "measurementLineScale": 900,
+        "measurementFontScale": 70,
+        "measurementLabelMinHeight": 18,
+        "measurementLabelHeightScale": 0.04,
+        "labelPadding": 6,
+        "boundPointRadiusMin": 1.1,
+        "boundPointRadiusScale": 620,
+        "pointRadiusMin": 1.2,
+        "pointRadiusScale": 520,
+        "cornerRadiusScale": 0.55,
+        "cornerRadiusMin": 0.8,
+        "highlightLineScale": 850,
+        "selectionHighlightScale": 1.9,
+        "voxelHalfSizeScale": 0.55,
+        "voxelHalfSizeMin": 0.9,
+        "voxelHalfSizeBoundScale": 0.85,
+        "pickThresholdPixels": 10.0,
+        "pickThresholdMinDimScale": 0.02
+      }
+    },
+    "renderer3d": {
+      "gridCountMin": 2,
+      "gridCountMax": 32,
+      "initialRotationYRadians": 0.0,
+      "initialRotationXRadians": -0.45,
+      "rotationSpeedRadiansPerSecond": 0.18,
+      "cameraDistanceScale": 2.2,
+      "fovDegrees": 55.0,
+      "near": 0.05,
+      "far": 200.0,
+      "pointSizeScale": 360.0,
+      "pointSizeMin": 2.0,
+      "boundPointSizeScale": 0.92
+    },
+    "boundPoints": {
+      "extent": 0.12,
+      "count": 4
+    },
+    "gridSpacingScale": 0.55,
+    "colors2d": {
+      "boundaryStroke": [231, 238, 252, 0.35],
+      "measurementLine": [255, 255, 255, 0.45],
+      "measurementLabelFill": [10, 13, 19, 0.7],
+      "measurementLabelStroke": [255, 255, 255, 0.12],
+      "measurementLabelText": [231, 238, 252, 0.92],
+      "gridLine": [107, 178, 255, 0.18],
+      "boundPoint": [231, 238, 252, 0.6],
+      "gridPoint": [107, 178, 255, 0.95],
+      "gridPointVoxel": [107, 178, 255, 0.32],
+      "highlightStroke": [255, 255, 255, 0.75],
+      "crosshair": [255, 255, 255, 0.1]
+    },
+    "colors3d": {
+      "cubeLine": [0.9, 0.94, 0.99, 0.3],
+      "gridLine": [0.42, 0.7, 1.0, 0.16],
+      "markerLine": [0.42, 0.7, 1.0, 0.22],
+      "point": [0.42, 0.7, 1.0, 0.88],
+      "boundPoint": [0.9, 0.94, 0.99, 0.6],
+      "selectionPoint": [1.0, 1.0, 1.0, 0.9],
+      "measurementLine": [1.0, 1.0, 1.0, 0.55]
+    }
+  },
+  "measurement": {
+    "labelPrecision": 1,
+    "statusPrecision": 3,
+    "defaultSelectedAIndex": 0,
+    "defaultSelectedBIndexMode": "last"
+  },
+  "units": {
+    "secondsPerGyr": 3.15576e16
+  },
+  "numericSafety": {
+    "minScaleFactor": 1e-9,
+    "minDenominator": 1e-24,
+    "minSegmentDuration": 1e-9,
+    "minSegmentRange": 1e-12,
+    "minRatio": 1e-12,
+    "minMaxTime": 1e-9,
+    "minPositiveSpeedGyrPerSecond": 1e-4
+  }
+}

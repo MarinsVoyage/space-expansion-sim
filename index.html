@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>Space Expansion Simulator 2D and 3D</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <noscript>
+    <style>
+      .app
+      {
+        display: none;
+      }
+
+      .noscriptMessage
+      {
+        display: grid;
+      }
+    </style>
+  </noscript>
+  <div class="noscriptMessage" id="noScriptMessage" role="status" aria-live="polite">
+    JavaScript is required to run this simulation. Please enable JavaScript and reload.
+  </div>
+  <div class="app" id="appRoot">
+    <header class="topbar">
+      <div class="titleBlock">
+        <div class="title">Space Expansion with comoving grid and proper distances scale with a of t</div>
+        <div class="subtitle" id="statusText">Initializing...</div>
+        <button id="controlsToggleButton" class="controlsToggle" type="button" aria-expanded="true" aria-controls="controlsPanel">Hide controls</button>
+      </div>
+
+      <div class="controls" id="controlsPanel" aria-label="Simulation controls">
+        <label class="control">
+          <span class="controlLabel">Mode</span>
+          <select id="modeSelect" class="controlInput"></select>
+        </label>
+
+        <label class="control">
+          <span class="controlLabel">Render</span>
+          <select id="renderSelect" class="controlInput"></select>
+        </label>
+
+        <label class="control">
+          <span class="controlLabel">Distribution</span>
+          <select id="distributionSelect" class="controlInput"></select>
+        </label>
+
+        <label class="control">
+          <span class="controlLabel">Speed</span>
+          <input id="speedInput" class="controlInput" type="range" />
+        </label>
+
+        <label class="control wide">
+          <span class="controlLabel">Simulation timeline</span>
+          <input id="timelineInput" class="controlInput" type="range" />
+        </label>
+
+        <label class="control">
+          <span class="controlLabel">Scale factor range</span>
+          <select id="rangeSelect" class="controlInput"></select>
+        </label>
+
+        <label class="control">
+          <span class="controlLabel">Grid density</span>
+          <input id="densityInput" class="controlInput" type="range" />
+        </label>
+
+        <label class="control">
+          <span class="controlLabel">Box size comoving Mpc</span>
+          <input id="boxSizeInput" class="controlInput" type="number" inputmode="numeric" />
+        </label>
+
+        <label class="control checkbox">
+          <span class="controlLabel">Show bound points</span>
+          <input id="boundCheckbox" class="controlInput" type="checkbox" />
+        </label>
+
+        <label class="control checkbox">
+          <span class="controlLabel">Measure distance</span>
+          <input id="measureCheckbox" class="controlInput" type="checkbox" />
+        </label>
+
+        <div class="buttons">
+          <button id="playPauseButton" class="button" type="button">Pause</button>
+          <button id="resetButton" class="button secondary" type="button">Reset</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="panes">
+      <section class="pane">
+        <div class="paneHeader">
+          <div class="paneTitle">2D slice</div>
+          <div class="paneHint">Click to select A. Shift+click to select B.</div>
+        </div>
+        <div class="overlayText" id="overlay2d"></div>
+        <canvas id="canvas2d" class="canvas"></canvas>
+      </section>
+
+      <section class="pane">
+        <div class="paneHeader">
+          <div class="paneTitle">3D cube</div>
+          <div class="paneHint">Hubble flow points expand with the cube and bound points stay fixed in proper space.</div>
+        </div>
+        <div class="overlayText" id="overlay3d"></div>
+        <canvas id="canvas3d" class="canvas"></canvas>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footerText">
+        Notes. This is a visualization of FLRW expansion using a scale factor a of t. Hubble flow points are fixed in comoving coordinates and proper distances scale proportional to a of t. Bound points are an illustrative decoupled set fixed in proper positions.
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/core_number-utils.js"></script>
+  <script src="js/core_dom-utils.js"></script>
+  <script src="js/config_loader.js"></script>
+  <script src="js/cosmology_expansion-model.js"></script>
+  <script src="js/renderer2d_grid.js"></script>
+  <script src="js/renderer2d_view.js"></script>
+  <script src="js/renderer2d_renderer.js"></script>
+  <script src="js/renderer3d_math.js"></script>
+  <script src="js/renderer3d_geometry.js"></script>
+  <script src="js/renderer3d_renderer.js"></script>
+  <script src="js/app_state.js"></script>
+  <script src="js/app_ui.js"></script>
+  <script src="js/app_main.js"></script>
+</body>
+</html>
